@@ -4,11 +4,12 @@ import { StyleSheet, Text, View } from 'react-native';
 import Initialization from './component/Initialization/Initialization.js';
 import SuccessPage from './component/create/SuccessPage.js'
 import TransactionSuccess from './component/current/TransactionSuccess';
+import InitializationWelcomeNavigator from './routes/IntializationWelcomeNavigator.js';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <TransactionSuccess/>
+      <InitializationWelcomeNavigator/>
       <StatusBar style="auto" />
     </View>
   );
