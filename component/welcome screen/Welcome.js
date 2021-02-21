@@ -10,12 +10,15 @@ export default class Welcome extends Component
                 <Text style={styles.Title}>Welcome to Dotchain</Text>
                 <TouchableOpacity style={styles.buttonCreateChain}>
                     <Text style={styles.createChainText}>Create Chain</Text>
+                    onPress={() => navigation.push('Deadline')}
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonJoinChain}>
                     <Text style={styles.joinChainText}>Join Chain</Text>
+                    onPress={() => navigation.push('OwnerInfo')}
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonCurrentChain}>
                     <Text style={styles.currentChainText}>Current Chain</Text>
+                    onPress={() => navigation.push('ChainsDisplay')}
                 </TouchableOpacity>
             </View>
         )
