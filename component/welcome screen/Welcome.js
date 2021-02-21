@@ -26,15 +26,15 @@ const styles= StyleSheet.create({
     Title:
     {
         alignSelf:"center",
-        fontSize:60,
+        fontSize:30,
         textAlign:"center",
-        marginBottom:90
-
+        marginBottom:90,
+        paddingHorizontal:15
     },
 
     buttonCreateChain:
     {
-        backgroundColor: "#DAF7A6",
+        backgroundColor: "#6A676A",
         alignContent: "center",
         paddingVertical:30,
         paddingHorizontal:35,

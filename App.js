@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Welcome from './component/welcome screen/Welcome.js';
+import Initialization from './component/Initialization/Initialization.js';
+import SuccessPage from './component/create/SuccessPage.js'
+import TransactionSuccess from './component/current/TransactionSuccess';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Welcome/>
+      <TransactionSuccess/>
       <StatusBar style="auto" />
     </View>
   );
@@ -15,8 +17,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#DCD7FF',
+    backgroundColor: '#B0ACB1',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });

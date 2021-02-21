@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
-export default class Initialization extends Component
+export default class OwnerInfo extends Component
 {
     render()
     {
         return(
             <View>
-                <Text style={styles.Title}>Welcome to Dotchain, Please enter your information</Text>
-                <TextInput style={styles.PublicKey} placeholder="64 character key"></TextInput>
-                <TextInput style={styles.Username} placeholder="username"></TextInput>
-                <TouchableOpacity style={styles.SubmitButton}>
-                    <Text style={styles.Submit}>Submit</Text>
+                <Text style={styles.Title}>Please enter the owner's address</Text>
+                <Text style= {styles.Text}>Owner's address:</Text>
+                <TextInput style={styles.PublicKey}  placeholder="64 Character Key"/>
+                <TouchableOpacity style={styles.ContinueButton}>
+                    <Text style={styles.Continue}>Continue</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -32,21 +32,12 @@ const styles= StyleSheet.create({
     {
         alignSelf:"center",
         backgroundColor:"#FFFFFF",
-        paddingHorizontal: 100,
-        marginBottom: 30,
-        height:40
-    },
-
-    Username:
-    {
-        alignSelf:"center",
-        backgroundColor:"#FFFFFF",
-        paddingHorizontal: 120,
+        paddingHorizontal: 121,
         height:40,
         marginBottom:30
     },
 
-    SubmitButton:
+    ContinueButton:
     {
         backgroundColor: "#6E2B7C",
         alignContent: "center",
@@ -56,11 +47,18 @@ const styles= StyleSheet.create({
         alignSelf:"center"
     },
 
-    Submit:
+    Continue:
     {
         alignItems:"center",
         color:"#FFFFFF",
         fontSize: 20,
         textAlign:"center"
+    },
+
+    Text:
+    {
+        fontSize:20, 
+        padding:5,
+        marginLeft: 15
     }
 })

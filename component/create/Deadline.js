@@ -1,17 +1,19 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
-export default class Initialization extends Component
+export default class Deadline extends Component
 {
     render()
     {
         return(
             <View>
-                <Text style={styles.Title}>Welcome to Dotchain, Please enter your information</Text>
-                <TextInput style={styles.PublicKey} placeholder="64 character key"></TextInput>
-                <TextInput style={styles.Username} placeholder="username"></TextInput>
-                <TouchableOpacity style={styles.SubmitButton}>
-                    <Text style={styles.Submit}>Submit</Text>
+                <Text style={styles.Title}>Please select deadline</Text>
+                <Text style= {styles.Text}>Join Deadline:</Text>
+                <TextInput style={styles.Start}  placeholder="MM/DD/YYYY"/>
+                <Text style={styles.Text}>Close contract:</Text>
+                <TextInput style={styles.Close} placeholder="MM/DD/YYYY"/>
+                <TouchableOpacity style={styles.ContinueButton}>
+                    <Text style={styles.Continue}>Continue</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -28,7 +30,7 @@ const styles= StyleSheet.create({
         paddingHorizontal:15
     },
 
-    PublicKey:
+    Start:
     {
         alignSelf:"center",
         backgroundColor:"#FFFFFF",
@@ -37,16 +39,16 @@ const styles= StyleSheet.create({
         height:40
     },
 
-    Username:
+    Close:
     {
         alignSelf:"center",
         backgroundColor:"#FFFFFF",
-        paddingHorizontal: 120,
+        paddingHorizontal: 100,
         height:40,
         marginBottom:30
     },
 
-    SubmitButton:
+    ContinueButton:
     {
         backgroundColor: "#6E2B7C",
         alignContent: "center",
@@ -56,11 +58,18 @@ const styles= StyleSheet.create({
         alignSelf:"center"
     },
 
-    Submit:
+    Continue:
     {
         alignItems:"center",
         color:"#FFFFFF",
         fontSize: 20,
         textAlign:"center"
+    },
+
+    Text:
+    {
+        fontSize:20, 
+        padding:5,
+        marginLeft:17
     }
 })
