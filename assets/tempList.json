@@ -1,0 +1,19 @@
+{
+    "Member1": {
+        "name": "rusty",
+        "address": "0x1e7",
+        "initBalance": 15
+    },
+
+    "Member2": {
+        "name": "b-sport",
+        "address": "0x486",
+        "initBalance": 12
+    },
+
+    "Member3": {
+        "name": "Hi-jinx",
+        "address": "0xb33",
+        "initBalance": 28
+    }
+}
