@@ -1,28 +1,22 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export default class Welcome extends Component
+export default function Welcome ({navigation})
 {
-    render()
-    {
-        return(
-            <View>
-                <Text style={styles.Title}>Welcome to Dotchain</Text>
-                <TouchableOpacity style={styles.buttonCreateChain}>
-                    <Text style={styles.createChainText}>Create Chain</Text>
-                    onPress={() => navigation.push('Deadline')}
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonJoinChain}>
-                    <Text style={styles.joinChainText}>Join Chain</Text>
-                    onPress={() => navigation.push('OwnerInfo')}
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonCurrentChain}>
-                    <Text style={styles.currentChainText}>Current Chain</Text>
-                    onPress={() => navigation.push('ChainsDisplay')}
-                </TouchableOpacity>
-            </View>
-        )
-    }
+    return(
+        <View>
+            <Text style={styles.Title}>Welcome to Dotchain</Text>
+            <TouchableOpacity style={styles.buttonCreateChain} onPress={() => navigation.navigate('Deadline')}>
+                <Text style={styles.createChainText}>Create Chain</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonJoinChain}  onPress={() => navigation.navigate('OwnerInfo')}>
+                <Text style={styles.joinChainText}>Join Chain</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonCurrentChain} onPress={() => navigation.navigate('ChainsDisplay')}>
+                <Text style={styles.currentChainText}>Current Chain</Text>
+            </TouchableOpacity>
+        </View>
+    )
 }
 
 const styles= StyleSheet.create({
@@ -37,7 +31,7 @@ const styles= StyleSheet.create({
 
     buttonCreateChain:
     {
-        backgroundColor: "#6A676A",
+        backgroundColor: "#6E2B7C",
         alignContent: "center",
         paddingVertical:30,
         paddingHorizontal:35,
@@ -48,14 +42,14 @@ const styles= StyleSheet.create({
     createChainText:
     {
         alignItems:"center",
-        color:"#273746",
+        color:"#FFFFFF",
         fontSize: 30,
         textAlign:"center"
 
     },
     buttonJoinChain:
     {
-        backgroundColor: "#DAF7A6",
+        backgroundColor: "#6E2B7C",
         alignContent: "center",
         paddingVertical:30,
         paddingHorizontal:50,
@@ -67,13 +61,13 @@ const styles= StyleSheet.create({
     joinChainText:
     {
         alignItems:"center",
-        color:"#273746",
+        color:"#FFFFFF",
         fontSize: 30,
         textAlign:"center"
     },
     buttonCurrentChain:
     {
-        backgroundColor: "#DAF7A6",
+        backgroundColor: "#6E2B7C",
         alignContent: "center",
         padding:30,
         borderRadius:50,
@@ -83,7 +77,7 @@ const styles= StyleSheet.create({
     currentChainText:
     {
         alignItems:"center",
-        color:"#273746",
+        color:"#FFFFFF",
         fontSize: 30,
         textAlign:"center"
 

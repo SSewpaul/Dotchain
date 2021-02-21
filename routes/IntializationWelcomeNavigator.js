@@ -6,7 +6,7 @@ import React,{Component} from 'react-native';
 
 class InitializationWelcomeNavigator extends Component {
     constructor(props){
-      super(props);
+      super(prop);
       this.state={first: true};
     }
     handle(){

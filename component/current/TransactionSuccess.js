@@ -30,6 +30,6 @@ const styles= StyleSheet.create({
         fontSize:20,
         textAlign:"center",
         paddingHorizontal:15
-    },
+    }
 
 })

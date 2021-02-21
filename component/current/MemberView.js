@@ -1,28 +1,24 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export default class ChainsView extends Component
+export default function ChainsView({navigation})
 {
-    render()
-    {
-        return(
-            <View>
-                <Text style={styles.Title}>Rusty</Text>
-                <Text style={styles.text}>No outstanding requests with this user</Text>
-                <View style = {styles.lineStyle} />
-                <Text style= {styles.amount}>.008 ETH</Text>
-
-                <View style = {styles.buttonGroup}>
-                    <TouchableOpacity style={styles.sendButton}>
-                        <Text style={styles.sendText}>Send</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.requestButton}>
-                        <Text style={styles.requestText}>Request</Text>
-                    </TouchableOpacity>
-                </View>
+    return(
+        <View>
+            <Text style={styles.Title}>Rusty</Text>
+            <Text style={styles.text}>No outstanding requests with this user</Text>
+            <View style = {styles.lineStyle} />
+            <Text style= {styles.amount}>.008 ETH</Text>
+            <View style = {styles.buttonGroup}>
+                <TouchableOpacity style={styles.sendButton}>
+                    <Text style={styles.sendText} onPress={()=>{navigation.navigate('TransactionSuccess')}}>Send</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.requestButton}>
+                    <Text style={styles.requestText}>Request</Text>
+                </TouchableOpacity>
             </View>
-        )
-    }
+        </View>
+    )
 }
 
 const styles= StyleSheet.create({

@@ -1,31 +1,28 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export default class ChainsDisplay extends Component
+export default function ChainsDisplay({navigation})
 {
-    render()
-    {
-        return(
-            <View>
-                <Text style={styles.Title}>Current chains</Text>
-                <TouchableOpacity style={styles.buttonChain}>
-                    <Text style={styles.currentChainText}>Chain 1</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonChain}>
-                    <Text style={styles.currentChainText}>Chain 2</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonChain}>
-                    <Text style={styles.currentChainText}>Chain 3</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonChain}>
-                    <Text style={styles.currentChainText}>Chain 4</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonChain}>
-                    <Text style={styles.currentChainText}>Chain 5</Text>
-                </TouchableOpacity>
-            </View>
-        )
-    }
+    return(
+        <View>
+            <Text style={styles.Title}>Current chains</Text>
+            <TouchableOpacity style={styles.buttonChain} onPress={()=>navigation.navigate('MemberList')}>
+                <Text style={styles.currentChainText}>Chain 1</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonChain}>
+                <Text style={styles.currentChainText}>Chain 2</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonChain}>
+                <Text style={styles.currentChainText}>Chain 3</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonChain}>
+                <Text style={styles.currentChainText}>Chain 4</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonChain}>
+                <Text style={styles.currentChainText}>Chain 5</Text>
+            </TouchableOpacity>
+        </View>
+    )
 }
 
 const styles= StyleSheet.create({
@@ -47,7 +44,7 @@ const styles= StyleSheet.create({
         marginBottom:20,
         alignSelf:"center"
     },
-    
+
     currentChainText:
     {
         alignItems:"center",
