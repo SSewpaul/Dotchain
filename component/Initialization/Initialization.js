@@ -1,19 +1,22 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import 'react-native-gesture-handler';
 
 export default class Initialization extends Component
 {
     render()
     {
         return(
-            <View>
-                <Text style={styles.Title}>Welcome to Dotchain, Please enter your information</Text>
-                <TextInput style={styles.PublicKey} placeholder="64 character key"></TextInput>
-                <TextInput style={styles.Username} placeholder="username"></TextInput>
-                <TouchableOpacity style={styles.SubmitButton}>
-                    <Text style={styles.Submit}>Submit</Text>
-                </TouchableOpacity>
-            </View>
+                <View>
+                    <Text style={styles.Title}>Welcome to Dotchain, Please enter your information</Text>
+                    <Text style={styles.Text}>Public key:</Text>
+                    <TextInput style={styles.PublicKey} placeholder="64 character key"></TextInput>
+                    <Text style={styles.Text}>Username:</Text>
+                    <TextInput style={styles.Username} placeholder="username"></TextInput>
+                    <TouchableOpacity style={styles.SubmitButton}>
+                        <Text style={styles.Submit}>Submit</Text>
+                    </TouchableOpacity>
+                </View>
         )
     }
 }
@@ -62,5 +65,12 @@ const styles= StyleSheet.create({
         color:"#FFFFFF",
         fontSize: 20,
         textAlign:"center"
+    },
+
+    Text:
+    {
+        fontSize:20,
+        marginBottom:10,
+        marginLeft: 45
     }
 })

@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, Image, View} from 'react-native';
 
-export default class SuccessPage extends Component
+export default class TransactionSuccess extends Component
 {
     render()
     {
         return(
             <View>
                 <Text style={styles.Title}>You're all set!</Text>
-                <Text style= {styles.Text}>Check the chains you've joined at the home screen</Text>
+                <Image style={styles.checkmark} source={require("../../assets/ok.png")}/>
+                <Text style= {styles.Text}>Transaction pending</Text>
             </View>
         )
     }
@@ -20,7 +21,6 @@ const styles= StyleSheet.create({
         alignSelf:"center",
         fontSize:30,
         textAlign:"center",
-        marginBottom:30,
         paddingHorizontal:15
     },
 
@@ -30,5 +30,6 @@ const styles= StyleSheet.create({
         fontSize:20,
         textAlign:"center",
         paddingHorizontal:15
-    }
+    },
+
 })
