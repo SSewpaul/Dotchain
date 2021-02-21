@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
 export default function ChainsView({navigation})
 {
@@ -8,7 +8,7 @@ export default function ChainsView({navigation})
             <Text style={styles.Title}>Rusty</Text>
             <Text style={styles.text}>No outstanding requests with this user</Text>
             <View style = {styles.lineStyle} />
-            <Text style= {styles.amount}>.008 ETH</Text>
+            <TextInput style= {styles.amount} placeholder="0 ETH"/>
             <View style = {styles.buttonGroup}>
                 <TouchableOpacity style={styles.sendButton}>
                     <Text style={styles.sendText} onPress={()=>{navigation.navigate('TransactionSuccess')}}>Send</Text>
