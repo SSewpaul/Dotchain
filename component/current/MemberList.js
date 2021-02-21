@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-export default class ChainsDisplay extends Component
+export default function MemberList({navigation})
 {
-    render()
-    {
         return(
             <View>
                 <Text style={styles.Title}>Chain 1 Balance</Text>
@@ -12,7 +10,7 @@ export default class ChainsDisplay extends Component
                 <View style = {styles.lineStyle} />
                 <Text style= {styles.membersHeader}>Members</Text>
                 <TouchableOpacity style={styles.buttonChain}>
-                    <Text style={styles.currentChainText}>Rusty</Text>
+                    <Text style={styles.currentChainText} onPress={()=>{navigation.navigate('MemberView')}}>Rusty</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.buttonChain}>
                     <Text style={styles.currentChainText}>Nelly</Text>
@@ -28,7 +26,6 @@ export default class ChainsDisplay extends Component
                 </TouchableOpacity>
             </View>
         )
-    }
 }
 
 const styles= StyleSheet.create({

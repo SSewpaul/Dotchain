@@ -2,23 +2,20 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import 'react-native-gesture-handler';
 
-export default class Initialization extends Component
+export default function Initialization({navigation})
 {
-    render()
-    {
-        return(
-                <View>
-                    <Text style={styles.Title}>Welcome to Dotchain, Please enter your information</Text>
-                    <Text style={styles.Text}>Public key:</Text>
-                    <TextInput style={styles.PublicKey} placeholder="64 character key"></TextInput>
-                    <Text style={styles.Text}>Username:</Text>
-                    <TextInput style={styles.Username} placeholder="username"></TextInput>
-                    <TouchableOpacity style={styles.SubmitButton}>
-                        <Text style={styles.Submit}>Submit</Text>
-                    </TouchableOpacity>
-                </View>
-        )
-    }
+    return(
+            <View>
+                <Text style={styles.Title}>Welcome to Dotchain, Please enter your information</Text>
+                <Text style={styles.Text}>Public key:</Text>
+                <TextInput style={styles.PublicKey} placeholder="64 character key"></TextInput>
+                <Text style={styles.Text}>Username:</Text>
+                <TextInput style={styles.Username} placeholder="username"></TextInput>
+                <TouchableOpacity style={styles.SubmitButton} onPress={()=>{navigation.navigate('Welcome')}}>
+                    <Text style={styles.Submit}>Submit</Text>
+                </TouchableOpacity>
+            </View>
+    )
 }
 
 const styles= StyleSheet.create({
