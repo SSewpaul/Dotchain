@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
-export default class OwnerInfo extends Component
+export default function OwnerInfo({navigation})
 {
-    render()
-    {
+    
         return(
             <View>
                 <Text style={styles.Title}>Please enter the owner's address</Text>
                 <Text style= {styles.Text}>Owner's address:</Text>
                 <TextInput style={styles.PublicKey}  placeholder="64 Character Key"/>
-                <TouchableOpacity style={styles.ContinueButton}>
+                <TouchableOpacity style={styles.ContinueButton} onPress={() => navigation.navigate('Contribution')}>
                     <Text style={styles.Continue}>Continue</Text>
                 </TouchableOpacity>
             </View>
         )
-    }
 }
 
 const styles= StyleSheet.create({

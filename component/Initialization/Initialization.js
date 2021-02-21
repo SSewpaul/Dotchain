@@ -1,16 +1,19 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import 'react-native-gesture-handler';
 
 export default function Initialization({navigation})
 {
+    const [name, setName] = useState('');
+    const [key, setKey] = useState('');
+
     return(
             <View>
                 <Text style={styles.Title}>Welcome to Dotchain, Please enter your information</Text>
                 <Text style={styles.Text}>Public key:</Text>
-                <TextInput style={styles.PublicKey} placeholder="64 character key"></TextInput>
+                <TextInput style={styles.PublicKey} placeholder="64 character key" onChangeText={key => setKey(key)} defaultValue={key}/>
                 <Text style={styles.Text}>Username:</Text>
-                <TextInput style={styles.Username} placeholder="username"></TextInput>
+                <TextInput style={styles.Username} placeholder="username" onChangeText={name => setName(name)} defaultValue={name}/>
                 <TouchableOpacity style={styles.SubmitButton} onPress={()=>{navigation.navigate('Welcome')}}>
                     <Text style={styles.Submit}>Submit</Text>
                 </TouchableOpacity>

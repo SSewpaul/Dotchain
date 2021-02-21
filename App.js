@@ -2,7 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Initialization from './component/Initialization/Initialization.js';
-import SuccessPage from './component/create/SuccessPage.js'
+import SuccessPage from './component/create/SuccessPage.js';
+import Contribution from './component/create/Contribution.js';
+import OwnerInfo from './component/create/OwnerInfo.js';
+import Deadline from './component/create/Deadline.js';
 import TransactionSuccess from './component/current/TransactionSuccess';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -24,6 +27,10 @@ export default function App() {
         <Stack.Screen name="MemberList" component={MemberList}/>
         <Stack.Screen name="MemberView" component={MemberView}/>
         <Stack.Screen name="TransactionSuccess" component={TransactionSuccess}/>
+        <Stack.Screen name="Contribution" component={Contribution}/>
+        <Stack.Screen name="SuccessPage" component={SuccessPage}/>
+        <Stack.Screen name="OwnerInfo" component={OwnerInfo}/>
+        <Stack.Screen name="Deadline" component={Deadline}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

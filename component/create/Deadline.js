@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
-export default class Deadline extends Component
+export default function Deadline({navigation})
 {
-    render()
-    {
+    
         return(
             <View>
                 <Text style={styles.Title}>Please select deadline</Text>
@@ -12,12 +11,11 @@ export default class Deadline extends Component
                 <TextInput style={styles.Start}  placeholder="MM/DD/YYYY"/>
                 <Text style={styles.Text}>Close contract:</Text>
                 <TextInput style={styles.Close} placeholder="MM/DD/YYYY"/>
-                <TouchableOpacity style={styles.ContinueButton}>
+                <TouchableOpacity style={styles.ContinueButton} onPress={() => navigation.navigate('OwnerInfo')}>
                     <Text style={styles.Continue}>Continue</Text>
                 </TouchableOpacity>
             </View>
         )
-    }
 }
 
 const styles= StyleSheet.create({

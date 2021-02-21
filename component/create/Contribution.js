@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
 
-export default class Contribution extends Component
+export default function Contribution({navigation})
 {
-    render()
-    {
+
         return(
             <View>
                 <Text style={styles.Title}>Please enter your intial contribution</Text>
                 <Text style= {styles.Text}>Contribution:</Text>
                 <TextInput style={styles.Contribution}  placeholder="XXXX ETH"/>
-                <TouchableOpacity style={styles.ContinueButton}>
+                <TouchableOpacity style={styles.ContinueButton} onPress={() => navigation.navigate('SuccessPage')}>
                     <Text style={styles.Continue}>Continue</Text>
                 </TouchableOpacity>
             </View>
         )
-    }
 }
 
 const styles= StyleSheet.create({

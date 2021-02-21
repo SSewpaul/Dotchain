@@ -8,7 +8,7 @@ export default class TransactionSuccess extends Component
         return(
             <View>
                 <Text style={styles.Title}>You're all set!</Text>
-                <Image style={styles.checkmark} source={require("../../assets/ok.png")}/>
+                <Image style={styles.checkmark} source={require("../../assets/ok-1.png")}/>
                 <Text style= {styles.Text}>Transaction pending</Text>
             </View>
         )
@@ -21,7 +21,8 @@ const styles= StyleSheet.create({
         alignSelf:"center",
         fontSize:30,
         textAlign:"center",
-        paddingHorizontal:15
+        //paddingHorizontal:15,
+        paddingTop:90
     },
 
     Text:
@@ -30,6 +31,11 @@ const styles= StyleSheet.create({
         fontSize:20,
         textAlign:"center",
         paddingHorizontal:15
+    },
+
+    checkmark:
+    {
+        alignSelf:"center"
     }
 
 })
